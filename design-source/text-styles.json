@@ -1,0 +1,47 @@
+{
+  "$description": "Manually transcribed from Figma Text Styles (not included in the Figma variables export). Source file: https://www.figma.com/design/pDlqLGvdVXkeZCe9CeF03w. Last synced: 2026-10-28. Update this file by hand whenever the Figma Text Styles change.",
+  "WF": {
+    "H1": {
+      "$type": "typography",
+      "$value": { "fontFamily": "Roboto", "fontWeight": 700, "fontSize": 32, "lineHeight": 1.5, "letterSpacing": 0 },
+      "$extensions": { "com.figma.styleName": "WF/H1", "com.figma.fontStyle": "Bold" }
+    },
+    "H2": {
+      "$type": "typography",
+      "$value": { "fontFamily": "Roboto", "fontWeight": 700, "fontSize": 24, "lineHeight": 1.5, "letterSpacing": 0 },
+      "$extensions": { "com.figma.styleName": "WF/H2", "com.figma.fontStyle": "Bold" }
+    },
+    "H3": {
+      "$type": "typography",
+      "$value": { "fontFamily": "Roboto", "fontWeight": 500, "fontSize": 20, "lineHeight": 1.5, "letterSpacing": 0 },
+      "$extensions": { "com.figma.styleName": "WF/H3", "com.figma.fontStyle": "Medium" }
+    },
+    "Body": {
+      "Large": {
+        "$type": "typography",
+        "$value": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": 16, "lineHeight": 1.5, "letterSpacing": 0 },
+        "$extensions": { "com.figma.styleName": "WF/Body/Large", "com.figma.fontStyle": "Regular" }
+      },
+      "Default": {
+        "$type": "typography",
+        "$value": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": 14, "lineHeight": 1.5, "letterSpacing": 0 },
+        "$extensions": { "com.figma.styleName": "WF/Body/Default", "com.figma.fontStyle": "Regular" }
+      },
+      "Strong": {
+        "$type": "typography",
+        "$value": { "fontFamily": "Roboto", "fontWeight": 500, "fontSize": 14, "lineHeight": 1.5, "letterSpacing": 0 },
+        "$extensions": { "com.figma.styleName": "WF/Body/Strong", "com.figma.fontStyle": "Medium" }
+      }
+    },
+    "Caption": {
+      "$type": "typography",
+      "$value": { "fontFamily": "Roboto", "fontWeight": 400, "fontSize": 12, "lineHeight": 1.5, "letterSpacing": 0 },
+      "$extensions": { "com.figma.styleName": "WF/Caption", "com.figma.fontStyle": "Regular" }
+    },
+    "Overline": {
+      "$type": "typography",
+      "$value": { "fontFamily": "Roboto", "fontWeight": 500, "fontSize": 11, "lineHeight": 1.5, "letterSpacing": 0 },
+      "$extensions": { "com.figma.styleName": "WF/Overline", "com.figma.fontStyle": "Medium" }
+    }
+  }
+}
