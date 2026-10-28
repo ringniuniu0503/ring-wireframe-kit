@@ -55,7 +55,7 @@
   --rwk-radius-full: 999px;
 
   /* ---------- Primitives · Typography ---------- */
-  --rwk-font-family-roboto: 'Roboto', sans-serif;
+  --rwk-font-family-sans: 'Roboto', 'Noto Sans TC', sans-serif;
   --rwk-font-weight-regular: 400;
   --rwk-font-weight-medium: 500;
   --rwk-font-weight-bold: 700;
@@ -115,49 +115,49 @@
 
   /* ---------- Text styles ---------- */
   /* Figma: WF/H1 */
-  --rwk-text-h1-font-family: var(--rwk-font-family-roboto);
+  --rwk-text-h1-font-family: var(--rwk-font-family-sans);
   --rwk-text-h1-font-weight: var(--rwk-font-weight-bold);
   --rwk-text-h1-font-size: var(--rwk-font-size-32);
   --rwk-text-h1-line-height: var(--rwk-line-height-150);
   --rwk-text-h1-letter-spacing: var(--rwk-letter-spacing-0);
   /* Figma: WF/H2 */
-  --rwk-text-h2-font-family: var(--rwk-font-family-roboto);
+  --rwk-text-h2-font-family: var(--rwk-font-family-sans);
   --rwk-text-h2-font-weight: var(--rwk-font-weight-bold);
   --rwk-text-h2-font-size: var(--rwk-font-size-24);
   --rwk-text-h2-line-height: var(--rwk-line-height-150);
   --rwk-text-h2-letter-spacing: var(--rwk-letter-spacing-0);
   /* Figma: WF/H3 */
-  --rwk-text-h3-font-family: var(--rwk-font-family-roboto);
+  --rwk-text-h3-font-family: var(--rwk-font-family-sans);
   --rwk-text-h3-font-weight: var(--rwk-font-weight-medium);
   --rwk-text-h3-font-size: var(--rwk-font-size-20);
   --rwk-text-h3-line-height: var(--rwk-line-height-150);
   --rwk-text-h3-letter-spacing: var(--rwk-letter-spacing-0);
   /* Figma: WF/Body/Large */
-  --rwk-text-body-large-font-family: var(--rwk-font-family-roboto);
+  --rwk-text-body-large-font-family: var(--rwk-font-family-sans);
   --rwk-text-body-large-font-weight: var(--rwk-font-weight-regular);
   --rwk-text-body-large-font-size: var(--rwk-font-size-16);
   --rwk-text-body-large-line-height: var(--rwk-line-height-150);
   --rwk-text-body-large-letter-spacing: var(--rwk-letter-spacing-0);
   /* Figma: WF/Body/Default */
-  --rwk-text-body-default-font-family: var(--rwk-font-family-roboto);
+  --rwk-text-body-default-font-family: var(--rwk-font-family-sans);
   --rwk-text-body-default-font-weight: var(--rwk-font-weight-regular);
   --rwk-text-body-default-font-size: var(--rwk-font-size-14);
   --rwk-text-body-default-line-height: var(--rwk-line-height-150);
   --rwk-text-body-default-letter-spacing: var(--rwk-letter-spacing-0);
   /* Figma: WF/Body/Strong */
-  --rwk-text-body-strong-font-family: var(--rwk-font-family-roboto);
+  --rwk-text-body-strong-font-family: var(--rwk-font-family-sans);
   --rwk-text-body-strong-font-weight: var(--rwk-font-weight-medium);
   --rwk-text-body-strong-font-size: var(--rwk-font-size-14);
   --rwk-text-body-strong-line-height: var(--rwk-line-height-150);
   --rwk-text-body-strong-letter-spacing: var(--rwk-letter-spacing-0);
   /* Figma: WF/Caption */
-  --rwk-text-caption-font-family: var(--rwk-font-family-roboto);
+  --rwk-text-caption-font-family: var(--rwk-font-family-sans);
   --rwk-text-caption-font-weight: var(--rwk-font-weight-regular);
   --rwk-text-caption-font-size: var(--rwk-font-size-12);
   --rwk-text-caption-line-height: var(--rwk-line-height-150);
   --rwk-text-caption-letter-spacing: var(--rwk-letter-spacing-0);
   /* Figma: WF/Overline */
-  --rwk-text-overline-font-family: var(--rwk-font-family-roboto);
+  --rwk-text-overline-font-family: var(--rwk-font-family-sans);
   --rwk-text-overline-font-weight: var(--rwk-font-weight-medium);
   --rwk-text-overline-font-size: var(--rwk-font-size-11);
   --rwk-text-overline-line-height: var(--rwk-line-height-150);

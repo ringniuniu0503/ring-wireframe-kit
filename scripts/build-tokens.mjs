@@ -44,14 +44,22 @@ const styles = collect(textStyles).map(([path, token]) => ({
 const uniqueSorted = (values, compare) => [...new Set(values)].sort(compare)
 const byNumber = (a, b) => a - b
 
-const families = uniqueSorted(styles.map((s) => s.fontFamily))
+// fontFamily may be a single name or a fallback stack (e.g. Roboto + Noto Sans TC).
+// The token is named after its generic family, not a specific font, so all styles must share one stack.
+const GENERIC_FAMILY = { token: 'sans', css: 'sans-serif' }
+const familyStack = (fontFamily) => [fontFamily].flat()
+const stacks = new Set(styles.map((s) => familyStack(s.fontFamily).join(', ')))
+if (stacks.size > 1) {
+  throw new Error(`Text styles use different font stacks (${[...stacks].join(' | ')}); add a token per stack.`)
+}
+const fontStack = familyStack(styles[0].fontFamily)
 const weights = new Map(styles.map((s) => [s.fontWeight, s.fontStyle]))
 const weightList = uniqueSorted([...weights.keys()], byNumber)
 const sizes = uniqueSorted(styles.map((s) => s.fontSize), byNumber)
 const lineHeights = uniqueSorted(styles.map((s) => s.lineHeight), byNumber)
 const letterSpacings = uniqueSorted(styles.map((s) => s.letterSpacing), byNumber)
 
-const familyVar = (family) => cssVar(`font-family-${family.toLowerCase().replace(/\s+/g, '-')}`)
+const familyVar = () => cssVar(`font-family-${GENERIC_FAMILY.token}`)
 const weightVar = (weight) => cssVar(`font-weight-${weights.get(weight).toLowerCase()}`)
 const sizeVar = (size) => cssVar(`font-size-${size}`)
 const lineHeightVar = (lh) => cssVar(`line-height-${Math.round(lh * 100)}`)
@@ -59,7 +67,7 @@ const letterSpacingVar = (ls) => cssVar(`letter-spacing-${ls}`)
 const textVar = (style, prop) => cssVar(`text-${style.name}-${prop}`)
 
 const typographyPrimitiveLines = [
-  ...families.map((f) => `  ${familyVar(f)}: '${f}', sans-serif;`),
+  `  ${familyVar()}: ${fontStack.map((f) => `'${f}'`).join(', ')}, ${GENERIC_FAMILY.css};`,
   ...weightList.map((w) => `  ${weightVar(w)}: ${w};`),
   ...sizes.map((s) => `  ${sizeVar(s)}: ${s}px;`),
   ...lineHeights.map((lh) => `  ${lineHeightVar(lh)}: ${lh};`),
@@ -67,7 +75,7 @@ const typographyPrimitiveLines = [
 ]
 
 const properties = [
-  ['font-family', (s) => familyVar(s.fontFamily)],
+  ['font-family', () => familyVar()],
   ['font-weight', (s) => weightVar(s.fontWeight)],
   ['font-size', (s) => sizeVar(s.fontSize)],
   ['line-height', (s) => lineHeightVar(s.lineHeight)],

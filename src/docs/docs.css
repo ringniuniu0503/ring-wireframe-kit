@@ -1,0 +1,86 @@
+/* Shared layout for Foundations documentation pages. Uses semantic tokens only. */
+
+.rwk-doc {
+  color: var(--rwk-color-text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--rwk-space-xl);
+}
+
+.rwk-doc h1,
+.rwk-doc h2,
+.rwk-doc h3,
+.rwk-doc p {
+  margin: 0;
+}
+
+.rwk-doc-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rwk-space-md);
+}
+
+.rwk-doc-lead {
+  color: var(--rwk-color-text-secondary);
+}
+
+.rwk-doc-note {
+  background: var(--rwk-color-annotation-note-bg);
+  color: var(--rwk-color-annotation-note-text);
+  border-radius: var(--rwk-radius-md);
+  padding: var(--rwk-space-sm) var(--rwk-space-md);
+}
+
+.rwk-doc-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rwk-space-xs);
+}
+
+.rwk-doc-group-title {
+  color: var(--rwk-color-text-secondary);
+  text-transform: uppercase;
+}
+
+/* ---------- Color swatches ---------- */
+
+.rwk-doc-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--rwk-space-3xl) * 3), 1fr));
+  gap: var(--rwk-space-sm);
+}
+
+.rwk-doc-swatch-grid--compact {
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--rwk-space-3xl) * 2), 1fr));
+}
+
+.rwk-doc-swatch {
+  background: var(--rwk-color-surface-muted);
+  border-radius: var(--rwk-radius-md);
+  padding: var(--rwk-space-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--rwk-space-2xs);
+}
+
+.rwk-doc-swatch-chip {
+  height: var(--rwk-space-3xl);
+  border-radius: var(--rwk-radius-sm);
+  margin-bottom: var(--rwk-space-2xs);
+  /* Soft inner edge so light swatches stay visible on any background (no border-width token yet) */
+  box-shadow: inset 0 0 var(--rwk-space-2xs) var(--rwk-color-border-subtle);
+}
+
+.rwk-doc-swatch-name {
+  overflow-wrap: anywhere;
+}
+
+.rwk-doc-swatch-meta {
+  color: var(--rwk-color-text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.rwk-doc-swatch-value {
+  color: var(--rwk-color-text-tertiary);
+  text-transform: uppercase;
+}

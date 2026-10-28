@@ -1,0 +1,36 @@
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks'
+import { SemanticColors, PrimitiveColors } from '../docs/ColorSwatches'
+
+<Meta title="Foundations/Color" />
+
+<Unstyled>
+<div className="rwk-doc">
+
+<div className="rwk-doc-section">
+  <h1 className="rwk-text-h1">Color</h1>
+  <p className="rwk-doc-lead rwk-text-body-large">
+    A grayscale-first palette for wireframes, with a small set of status and accent colors.
+    Colors are organized in two layers: primitives hold the raw values, and semantic tokens
+    describe how each color is used. Every value on this page is read live from the tokens.
+  </p>
+</div>
+
+<div className="rwk-doc-section">
+  <h2 className="rwk-text-h2">Semantic colors</h2>
+  <p className="rwk-text-body-default">
+    Use these tokens in components. Each swatch shows the token name, the primitive it points to (→),
+    and the resolved value.
+  </p>
+  <SemanticColors />
+</div>
+
+<div className="rwk-doc-section">
+  <h2 className="rwk-text-h2">Primitives</h2>
+  <p className="rwk-doc-note rwk-text-body-strong">
+    Reference only. Components must not use primitive tokens directly; use a semantic token instead.
+  </p>
+  <PrimitiveColors />
+</div>
+
+</div>
+</Unstyled>

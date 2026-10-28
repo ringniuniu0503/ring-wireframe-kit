@@ -18,7 +18,9 @@
 
 ## 檔案結構
 - 每個元件放在 `src/components/<ComponentName>/`，包含元件、樣式、Storybook 檔案
-- `src/styles/`：`tokens.css`（自動產生）、`fonts.css`（Roboto 400 / 500 / 700）
+- `src/foundations/`：Foundations 指南頁（`.mdx`），例如 `Color.mdx`
+- `src/docs/`：文件頁共用的小工具（例如從 `tokens.css` 讀取 token 的 `tokens.ts`、共用樣式 `docs.css`）
+- `src/styles/`：`tokens.css`（自動產生）、`fonts.css`（Roboto + 中文備用字型 Noto Sans TC，400 / 500 / 700）
 - `design-source/`：token 的原始資料
 - `scripts/build-tokens.mjs`：token 轉換程式
 
