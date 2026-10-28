@@ -17,7 +17,10 @@ function collect(node, path = []) {
     .flatMap(([key, child]) => collect(child, [...path, key]))
 }
 
-const toVar = (path) => `--${path.join('-')}`.toLowerCase()
+// Every CSS variable is namespaced with this prefix, matching the .rwk-* class names.
+const PREFIX = 'rwk'
+const cssVar = (name) => `--${PREFIX}-${name}`
+const toVar = (path) => cssVar(path.join('-').toLowerCase())
 
 function variableValue(token) {
   const alias = token.$extensions?.['com.figma.aliasData']
@@ -48,11 +51,12 @@ const sizes = uniqueSorted(styles.map((s) => s.fontSize), byNumber)
 const lineHeights = uniqueSorted(styles.map((s) => s.lineHeight), byNumber)
 const letterSpacings = uniqueSorted(styles.map((s) => s.letterSpacing), byNumber)
 
-const familyVar = (family) => `--font-family-${family.toLowerCase().replace(/\s+/g, '-')}`
-const weightVar = (weight) => `--font-weight-${weights.get(weight).toLowerCase()}`
-const sizeVar = (size) => `--font-size-${size}`
-const lineHeightVar = (lh) => `--line-height-${Math.round(lh * 100)}`
-const letterSpacingVar = (ls) => `--letter-spacing-${ls}`
+const familyVar = (family) => cssVar(`font-family-${family.toLowerCase().replace(/\s+/g, '-')}`)
+const weightVar = (weight) => cssVar(`font-weight-${weights.get(weight).toLowerCase()}`)
+const sizeVar = (size) => cssVar(`font-size-${size}`)
+const lineHeightVar = (lh) => cssVar(`line-height-${Math.round(lh * 100)}`)
+const letterSpacingVar = (ls) => cssVar(`letter-spacing-${ls}`)
+const textVar = (style, prop) => cssVar(`text-${style.name}-${prop}`)
 
 const typographyPrimitiveLines = [
   ...families.map((f) => `  ${familyVar(f)}: '${f}', sans-serif;`),
@@ -72,14 +76,14 @@ const properties = [
 
 const textStyleLines = styles.flatMap((s) => [
   `  /* Figma: ${s.figmaName} */`,
-  ...properties.map(([prop, ref]) => `  --text-${s.name}-${prop}: var(${ref(s)});`),
+  ...properties.map(([prop, ref]) => `  ${textVar(s, prop)}: var(${ref(s)});`),
 ])
 
 const classBlocks = styles.map((s) =>
   [
     `/* Figma: ${s.figmaName} */`,
-    `.rwk-text-${s.name} {`,
-    ...properties.map(([prop]) => `  ${prop}: var(--text-${s.name}-${prop});`),
+    `.${PREFIX}-text-${s.name} {`,
+    ...properties.map(([prop]) => `  ${prop}: var(${textVar(s, prop)});`),
     '}',
   ].join('\n'),
 )
