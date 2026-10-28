@@ -67,8 +67,9 @@
   height: var(--rwk-space-3xl);
   border-radius: var(--rwk-radius-sm);
   margin-bottom: var(--rwk-space-2xs);
-  /* Soft inner edge so light swatches stay visible on any background (no border-width token yet) */
-  box-shadow: inset 0 0 var(--rwk-space-2xs) var(--rwk-color-border-subtle);
+  box-sizing: border-box;
+  /* Outline keeps light swatches (e.g. surface-muted) visible on the card background */
+  border: var(--rwk-border-width-default) solid var(--rwk-color-border-subtle);
 }
 
 .rwk-doc-swatch-name {

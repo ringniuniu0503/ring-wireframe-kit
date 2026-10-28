@@ -33,6 +33,7 @@
   --rwk-color-yellow-200: #ffe58f;
   --rwk-color-yellow-900: #7a5c00;
   --rwk-dimension-0: 0px;
+  --rwk-dimension-1: 1px;
   --rwk-dimension-2: 2px;
   --rwk-dimension-4: 4px;
   --rwk-dimension-8: 8px;
@@ -112,6 +113,8 @@
   --rwk-size-touch-mobile: var(--rwk-dimension-48);
   --rwk-size-touch-glove: var(--rwk-dimension-64);
   --rwk-size-touch-car: var(--rwk-dimension-76);
+  --rwk-border-width-default: var(--rwk-dimension-1);
+  --rwk-border-width-focus: var(--rwk-dimension-2);
 
   /* ---------- Text styles ---------- */
   /* Figma: WF/H1 */

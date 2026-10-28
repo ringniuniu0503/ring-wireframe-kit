@@ -413,6 +413,14 @@
         "com.figma.hiddenFromPublishing": true
       }
     },
+    "1": {
+      "$type": "number",
+      "$value": 1,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:146:430",
+        "com.figma.hiddenFromPublishing": true
+      }
+    },
     "2": {
       "$type": "number",
       "$value": 2,

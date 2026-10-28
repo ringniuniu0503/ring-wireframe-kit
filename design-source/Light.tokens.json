@@ -937,6 +937,42 @@
       }
     }
   },
+  "border": {
+    "width": {
+      "default": {
+        "$type": "number",
+        "$value": 1,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:146:428",
+          "com.figma.scopes": [
+            "STROKE_FLOAT"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:54d7fa555e6aecae0b919b67b48d92395d7dae76/-1:-1",
+            "targetVariableName": "dimension/1",
+            "targetVariableSetId": "VariableCollectionId:b3a2b4a305d491685809de1352dd983558f50a28/-1:-1",
+            "targetVariableSetName": "Primitives"
+          }
+        }
+      },
+      "focus": {
+        "$type": "number",
+        "$value": 2,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:146:429",
+          "com.figma.scopes": [
+            "STROKE_FLOAT"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:8064abee379404ed8435d0f92e730aaaea8131b6/-1:-1",
+            "targetVariableName": "dimension/2",
+            "targetVariableSetId": "VariableCollectionId:b3a2b4a305d491685809de1352dd983558f50a28/-1:-1",
+            "targetVariableSetName": "Primitives"
+          }
+        }
+      }
+    }
+  },
   "$extensions": {
     "com.figma.modeName": "Light"
   }
