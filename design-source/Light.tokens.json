@@ -935,6 +935,76 @@
           }
         }
       }
+    },
+    "icon": {
+      "xs": {
+        "$type": "number",
+        "$value": 16,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:159:200",
+          "com.figma.scopes": [
+            "WIDTH_HEIGHT",
+            "FONT_SIZE"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:ccff1734258a5dba9119f353e4190d5e6744c075/-1:-1",
+            "targetVariableName": "dimension/16",
+            "targetVariableSetId": "VariableCollectionId:b3a2b4a305d491685809de1352dd983558f50a28/-1:-1",
+            "targetVariableSetName": "Primitives"
+          }
+        }
+      },
+      "s": {
+        "$type": "number",
+        "$value": 20,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:159:201",
+          "com.figma.scopes": [
+            "WIDTH_HEIGHT",
+            "FONT_SIZE"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:97b12b0a59d8ecb4ddaa14b8538a72d720ccd276/-1:-1",
+            "targetVariableName": "dimension/20",
+            "targetVariableSetId": "VariableCollectionId:b3a2b4a305d491685809de1352dd983558f50a28/-1:-1",
+            "targetVariableSetName": "Primitives"
+          }
+        }
+      },
+      "m": {
+        "$type": "number",
+        "$value": 24,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:159:202",
+          "com.figma.scopes": [
+            "WIDTH_HEIGHT",
+            "FONT_SIZE"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:30870fb1fb75ce2a881eff5de8ddf9607e694854/-1:-1",
+            "targetVariableName": "dimension/24",
+            "targetVariableSetId": "VariableCollectionId:b3a2b4a305d491685809de1352dd983558f50a28/-1:-1",
+            "targetVariableSetName": "Primitives"
+          }
+        }
+      },
+      "l": {
+        "$type": "number",
+        "$value": 32,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:159:203",
+          "com.figma.scopes": [
+            "WIDTH_HEIGHT",
+            "FONT_SIZE"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:da83ddc15f8c194edee16f728b9de2e99f2fb9b4/-1:-1",
+            "targetVariableName": "dimension/32",
+            "targetVariableSetId": "VariableCollectionId:b3a2b4a305d491685809de1352dd983558f50a28/-1:-1",
+            "targetVariableSetName": "Primitives"
+          }
+        }
+      }
     }
   },
   "border": {

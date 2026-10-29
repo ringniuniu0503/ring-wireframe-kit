@@ -113,6 +113,10 @@
   --rwk-size-touch-mobile: var(--rwk-dimension-48);
   --rwk-size-touch-glove: var(--rwk-dimension-64);
   --rwk-size-touch-car: var(--rwk-dimension-76);
+  --rwk-size-icon-xs: var(--rwk-dimension-16);
+  --rwk-size-icon-s: var(--rwk-dimension-20);
+  --rwk-size-icon-m: var(--rwk-dimension-24);
+  --rwk-size-icon-l: var(--rwk-dimension-32);
   --rwk-border-width-default: var(--rwk-dimension-1);
   --rwk-border-width-focus: var(--rwk-dimension-2);
 
