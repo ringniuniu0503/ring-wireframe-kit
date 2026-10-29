@@ -8,28 +8,27 @@ import { TokenValue, TouchTargets } from '../docs/SizeTokens'
 
 <div className="rwk-doc-section">
   <h1 className="rwk-text-h1">Touch Targets</h1>
-  <p className="rwk-doc-lead rwk-text-body-large">
+  <div className="rwk-doc-lead rwk-text-body-large">
     Minimum sizes for anything people tap. The kit covers three contexts, from a phone in hand to a screen
     in a moving car. Each box is drawn at actual size. Every value on this page is read live from the tokens.
-  </p>
+  </div>
 </div>
 
 <div className="rwk-doc-section">
   <h2 className="rwk-text-h2">Rule</h2>
-  <p className="rwk-doc-note rwk-text-body-strong">
+  <div className="rwk-doc-note rwk-text-body-strong">
     The tappable area must never be smaller than the touch target for the device context.
     Even on mobile, that means at least <TokenValue name="--rwk-size-touch-mobile" /> in both width and height.
-  </p>
-  <p className="rwk-text-body-default">
+  </div>
+  <div className="rwk-text-body-default">
     The visible element can be smaller, such as an icon, as long as its tappable area is padded out to the
     target size.
-  </p>
+  </div>
 </div>
 
 <div className="rwk-doc-section">
   <h2 className="rwk-text-h2">Sizes</h2>
   <TouchTargets
-    draft
     usage={{
       mobile: 'Phones and tablets used by hand. The default for most screens.',
       glove: 'Wearables and outdoor devices that may be used with gloves or while moving, such as watches and bike computers.',
