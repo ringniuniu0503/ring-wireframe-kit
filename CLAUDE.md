@@ -66,6 +66,12 @@
 - Accessibility：說明
 - 規格表裡的數值必須直接讀取 token，不可手打，確保文件和元件永遠一致
 
+## Foundations 指南頁
+- 頁面清單（Storybook 側欄順序）：Introduction / Color / Typography / Spacing / Shape & Border / Touch Targets
+- Introduction 最後才做（專案介紹、token 架構、使用方式）
+- Iconography 不另外做頁面；寫在 Icon 元件的文件頁裡
+- 沿用 Color 頁的版型和 `src/docs/` 的共用工具；頁面上的數值一律從 token 讀取
+
 ## 組畫面規則
 - 只能使用元件庫裡已有的元件
 - 需要新元件時，先列出來問使用者
