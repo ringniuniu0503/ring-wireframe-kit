@@ -1,0 +1,118 @@
+import { Canvas, Controls, Meta, Unstyled } from '@storybook/addon-docs/blocks'
+import * as IconStories from './Icon.stories'
+import { Icon } from './Icon'
+import { Anatomy, ColorTable, DocHeader, DocSection, Measure, MeasureRow, SpecTable } from '../../docs/ComponentDoc'
+
+<Meta of={IconStories} />
+
+<Unstyled>
+<div className="rwk-doc">
+
+<DocHeader
+  title="Icon"
+  summary="A Material Symbols Rounded glyph, referenced by name. Icons inherit the surrounding text color."
+  figmaUrl="https://www.figma.com/design/pDlqLGvdVXkeZCe9CeF03w?node-id=10-182"
+/>
+
+<DocSection title="Playground">
+  <Canvas of={IconStories.Default} />
+  <Controls of={IconStories.Default} />
+</DocSection>
+
+{/* ---------- Overview ---------- */}
+
+<DocSection title="Overview" draft>
+  <h3 className="rwk-text-h3">When to use</h3>
+  <ul className="rwk-text-body-default">
+    <li>To reinforce a label or action with a recognizable symbol, such as in navigation tabs, buttons and list items.</li>
+    <li>To save space where the meaning is widely understood, such as search, close or back.</li>
+  </ul>
+
+  <h3 className="rwk-text-h3">When not to use</h3>
+  <ul className="rwk-text-body-default">
+    <li>As the only carrier of important meaning. Pair the icon with a text label, or use text alone.</li>
+    <li>As decoration that adds noise without helping recognition. Leave it out.</li>
+    <li>For illustrations, photos or logos. Use Image instead.</li>
+  </ul>
+
+  <h3 className="rwk-text-h3">Sizes</h3>
+  <ul className="rwk-text-body-default">
+    <li><strong>xs</strong> — inline with Body/Default or Caption text, in dense lists, chips and badges.</li>
+    <li><strong>s</strong> — next to Body/Large text and inside input fields.</li>
+    <li><strong>m</strong> — standalone actions such as icon buttons and navigation bars.</li>
+    <li><strong>l</strong> — moments of emphasis, such as empty states and feature highlights.</li>
+  </ul>
+  <Canvas of={IconStories.Sizes} />
+
+  <h3 className="rwk-text-h3">Exceptions and notes</h3>
+  <ul className="rwk-text-body-default">
+    <li>Set color on the parent, not the icon. The icon always follows the surrounding text color.</li>
+    <li>An icon is not interactive by itself. To make it tappable, place it in a button that meets the touch target size.</li>
+    <li>Placeholder phase: the icon currently renders as an outlined box with its name on hover. The real glyphs will replace it without changing how the component is used.</li>
+  </ul>
+  <Canvas of={IconStories.InheritsTextColor} />
+
+  <h3 className="rwk-text-h3">Iconography</h3>
+  <ul className="rwk-text-body-default">
+    <li>All icons come from <a className="rwk-doc-link" href="https://fonts.google.com/icons?icon.style=Rounded" target="_blank" rel="noreferrer">Material Symbols Rounded</a>. Do not add other icon sets.</li>
+    <li>Pass the icon name exactly as listed there, in lowercase with underscores, for example <code>search</code>, <code>arrow_back</code> or <code>settings</code>.</li>
+    <li>Style settings match Figma: weight 400, fill 0, grade 0.</li>
+  </ul>
+</DocSection>
+
+{/* ---------- Specs ---------- */}
+
+<DocSection title="Anatomy">
+  <Anatomy
+    parts={[
+      { label: 'Container', description: 'Square bounding box sized by the size token.', x: '0%', y: '0%' },
+      { label: 'Glyph', description: 'The Material Symbols character, drawn in the inherited text color.', x: '50%', y: '50%' },
+    ]}
+  >
+    <Icon size="l" />
+  </Anatomy>
+</DocSection>
+
+<DocSection title="Measurements">
+  <MeasureRow>
+    {['xs', 's', 'm', 'l'].map((size) => (
+      <Measure key={size} width={`--rwk-size-icon-${size}`} height={`--rwk-size-icon-${size}`} label={size}>
+        <Icon size={size} />
+      </Measure>
+    ))}
+  </MeasureRow>
+</DocSection>
+
+<DocSection title="Specs">
+  <SpecTable
+    rows={[
+      { part: 'Container · xs', property: 'Width, height', token: '--rwk-size-icon-xs' },
+      { part: 'Container · s', property: 'Width, height', token: '--rwk-size-icon-s' },
+      { part: 'Container · m', property: 'Width, height', token: '--rwk-size-icon-m' },
+      { part: 'Container · l', property: 'Width, height', token: '--rwk-size-icon-l' },
+      { part: 'Glyph (placeholder)', property: 'Outline width', token: '--rwk-border-width-default' },
+    ]}
+  />
+</DocSection>
+
+<DocSection title="Color">
+  <ColorTable
+    rows={[
+      { part: 'Glyph', state: 'Default', note: 'currentColor — inherits the parent text color' },
+      { part: 'Glyph', state: 'Figma default', token: '--rwk-color-text-secondary', note: '(used when placed in Figma without an override)' },
+    ]}
+  />
+</DocSection>
+
+<DocSection title="Accessibility">
+  <ul className="rwk-text-body-default">
+    <li><strong>Decorative icons</strong> (no <code>label</code>) are hidden from screen readers with <code>aria-hidden</code>. Use this when nearby text already says the same thing.</li>
+    <li><strong>Meaningful icons</strong> need a <code>label</code>. The icon is then announced as an image with that name.</li>
+    <li><strong>Icon-only buttons</strong>: give the accessible name to the button, and leave the icon inside without a label so it is not announced twice.</li>
+    <li><strong>Contrast</strong>: the icon uses the surrounding text color, so it meets the same contrast as that text.</li>
+    <li><strong>Focus</strong>: the icon is never focusable on its own; keyboard focus belongs to the control that contains it.</li>
+  </ul>
+</DocSection>
+
+</div>
+</Unstyled>

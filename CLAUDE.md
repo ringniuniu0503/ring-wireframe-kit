@@ -66,6 +66,11 @@
 - Accessibility：說明
 - 規格表裡的數值必須直接讀取 token，不可手打，確保文件和元件永遠一致
 
+**樣板**：以 `src/components/Icon/Icon.mdx` 為範本，使用 `src/docs/ComponentDoc.tsx` 的共用區塊
+- 頁面順序：`DocHeader`（名稱、一句說明、Figma 連結）→ Playground（`Canvas` + `Controls`）→ Overview（`DocSection draft`）→ Anatomy → Measurements → Specs → Color → Accessibility
+- `Anatomy`：放大的元件 + 編號標記 + 圖例；`Measure` / `MeasureRow`：尺寸標線；`SpecTable`、`ColorTable`：只填 token 名稱，數值自動讀取
+- 元件檔案：`<Name>.tsx`、`<Name>.css`、`<Name>.stories.tsx`、`<Name>.mdx`；文件頁用 `<Meta of={Stories} />` 綁定元件
+
 ## Foundations 指南頁
 - 頁面清單（Storybook 側欄順序）：Introduction / Color / Typography / Spacing / Shape & Border / Touch Targets
 - Introduction 最後才做（專案介紹、token 架構、使用方式）

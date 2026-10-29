@@ -1,0 +1,29 @@
+/* No color is set: the icon follows the surrounding text color (currentColor). */
+.rwk-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+  /* Placeholder glyph until Material Symbols Rounded is loaded */
+  border: var(--rwk-border-width-default) dashed currentColor;
+}
+
+.rwk-icon--xs {
+  width: var(--rwk-size-icon-xs);
+  height: var(--rwk-size-icon-xs);
+}
+
+.rwk-icon--s {
+  width: var(--rwk-size-icon-s);
+  height: var(--rwk-size-icon-s);
+}
+
+.rwk-icon--m {
+  width: var(--rwk-size-icon-m);
+  height: var(--rwk-size-icon-m);
+}
+
+.rwk-icon--l {
+  width: var(--rwk-size-icon-l);
+  height: var(--rwk-size-icon-l);
+}
